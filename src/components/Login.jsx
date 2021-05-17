@@ -62,8 +62,7 @@ function Login() {
           </button>
         </form>
         <p>
-          This is a clone site made for practise. Please don't input any
-          personal information.
+          THIS IS AN AMAZON CLONE SITE MADE FOR EDUCATIONAL PURPOSES ONLY. PLEASE DO NOT INPUT ANY PERSONAL INFORMATION.
         </p>
 
         <p>Not a member?</p>

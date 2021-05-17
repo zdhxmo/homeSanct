@@ -22,7 +22,7 @@ function Product({ id, title, description, image, price }) {
   return (
     <div className="product">
       <div className="product__info">
-        <h3>{title}</h3>
+        <h3>{title.length > 30 ? title.substring(0, 30) + "..." : title}</h3>
         <p>
           {description.length > 80
             ? description.substring(0, 80) + "..."
@@ -32,13 +32,6 @@ function Product({ id, title, description, image, price }) {
           <small>$</small>
           <strong>{price}</strong>
         </p>
-        {/*         <div className="product__rating">
-          {Array(rating)
-            .fill()
-            .map((_, i) => (
-              <p>⭐</p>
-            ))}
-        </div> */}
       </div>
 
       <img src={image} alt="" />

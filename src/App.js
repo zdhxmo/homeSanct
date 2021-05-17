@@ -9,9 +9,11 @@ import Checkout from './components/Checkout';
 import Login from './components/Login';
 import { auth } from './firebase'
 import { useStateValue } from './StateProvider';
+import Payment from './components/Payment';
+import { loadStripe } from '@stripe/stripe-js'
 
 function App() {
-  const [{},dispatch] = useStateValue()
+  const [{ }, dispatch] = useStateValue()
   const [products, setProducts] = useState([])
 
   useEffect(() => {
@@ -20,9 +22,7 @@ function App() {
         setProducts(res.data)
       })
       .catch(error => alert('error!'))
-  }, [])
 
-  useEffect(() => {
     auth.onAuthStateChanged(authUser => {
       if (authUser) {
         dispatch({
@@ -53,6 +53,12 @@ function App() {
             <Checkout />
           </Route>
 
+          {/* payment page */}
+          <Route exact path="/payment">
+            <Header />
+            <Payment />
+          </Route>
+
           {/* home page */}
           <Route path="/">
             <Header />
@@ -69,10 +75,7 @@ function App() {
               ))}
             </div>
           </Route>
-
-
         </Switch>
-
       </div>
     </Router>
   );
