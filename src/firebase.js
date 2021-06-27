@@ -1,21 +1,20 @@
-import firebase from 'firebase/app'
-import 'firebase/auth';
-import 'firebase/firestore';
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
 
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCkHCnl1Y-UvWszyesrsEynYiG9osrKDes",
-  authDomain: "nozama-clone.firebaseapp.com",
-  projectId: "nozama-clone",
-  storageBucket: "nozama-clone.appspot.com",
-  messagingSenderId: "436754823592",
-  appId: "1:436754823592:web:d0e080a987ff6a6a42859d",
-  measurementId: "G-D79N68MJZH"
+  apiKey: "AIzaSyAcyyh4P-r7dmkZ-1_OBS5nUhkM_htU79s",
+  authDomain: "homesanct-dm.firebaseapp.com",
+  projectId: "homesanct-dm",
+  storageBucket: "homesanct-dm.appspot.com",
+  messagingSenderId: "389351191315",
+  appId: "1:389351191315:web:272a2a5dc98dcbe20ca0e6",
+  measurementId: "G-86MCS6QL4W",
 };
 
-const firebaseApp = firebase.initializeApp(firebaseConfig)
+const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-const db = firebaseApp.firestore()
-const auth = firebase.auth()
+const db = firebaseApp.firestore();
+const auth = firebase.auth();
 
-export { db, auth }
+export { db, auth };
