@@ -17,3 +17,8 @@
     margin-bottom: 10px;
     object-fit: cover;
 }
+
+.checkout__left {
+    width: 70%;
+    margin-left: 50px;
+}

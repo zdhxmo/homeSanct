@@ -3,18 +3,12 @@ import "./styles/checkout.css";
 import Subtotal from "./Subtotal";
 import CheckoutProduct from "./CheckoutProduct";
 import { useStateValue } from "../StateProvider";
-import FlipMove from "react-flip-move";
 
 function Checkout() {
   const [{ cart, user }, dispatch] = useStateValue();
   return (
     <div className="checkout">
       <div className="checkout__left">
-        <img
-          className="checkout__ad"
-          src="https://i.ytimg.com/vi/oPnrQFkl7Ko/maxresdefault.jpg"
-          alt=""
-        />
         <div>
           <h3>Hello, {user?.email}</h3>
           <h2 className="checkout__title">Your Shopping Cart</h2>

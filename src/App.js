@@ -10,7 +10,7 @@ import Login from './components/Login';
 import { auth } from './firebase'
 import { useStateValue } from './StateProvider';
 import Payment from './components/Payment';
-import { loadStripe } from '@stripe/stripe-js'
+
 
 function App() {
   const [{ }, dispatch] = useStateValue()
@@ -66,6 +66,7 @@ function App() {
             <div className="product__grid">
               {products.map((product) => (
                 <Product
+                  key={product.id}
                   id={product.id}
                   title={product.title}
                   description={product.description}

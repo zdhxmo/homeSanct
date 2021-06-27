@@ -1,17 +1,36 @@
 .App {
-    font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 .product__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-row-gap: 80px;
-    padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 80px;
+  padding: 0 40px;
 }
 
 @media screen and (max-width: 375px) {
-    .product__grid {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
+  .product__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2.625),
+  only screen and (min--moz-device-pixel-ratio: 2.625),
+  only screen and (-o-min-device-pixel-ratio: 2.625/1),
+  only screen and (min-device-pixel-ratio: 2.625),
+  only screen and (min-resolution: 441dpi),
+  only screen and (min-resolution: 2.625dppx) {
+  .product__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 800px) {
+  .product__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./styles/login.css";
 import { auth } from "../firebase";
+import Logo from '../img/logo.png';
 
 function Login() {
   const history = useHistory();
@@ -34,8 +35,8 @@ function Login() {
       <Link to="/">
         <img
           className="login__logo"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1000px-Amazon_logo.svg.png"
-          alt=""
+          src={Logo}
+          alt="logo"
         />
       </Link>
       <div className="login__container">
@@ -61,10 +62,6 @@ function Login() {
             Sign In
           </button>
         </form>
-        <p>
-          THIS IS AN AMAZON CLONE SITE MADE FOR EDUCATIONAL PURPOSES ONLY. PLEASE DO NOT INPUT ANY PERSONAL INFORMATION.
-        </p>
-
         <p>Not a member?</p>
         <button onClick={register} className="login__registerButton">
           Create your account
