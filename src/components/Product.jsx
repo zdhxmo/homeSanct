@@ -23,11 +23,6 @@ function Product({ id, title, description, image, price }) {
     <div className="product">
       <div className="product__info">
         <h3>{title.length > 30 ? title.substring(0, 30) + "..." : title}</h3>
-        <p>
-          {description.length > 80
-            ? description.substring(0, 80) + "..."
-            : description}
-        </p>
         <p className="product__price">
           <small>$</small>
           <strong>{price}</strong>

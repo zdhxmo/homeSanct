@@ -1,46 +1,46 @@
-import React, { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Header from './components/Header';
-import axios from 'axios'
-import './App.css';
-import Home from './components/Home';
-import Product from './components/Product';
-import Checkout from './components/Checkout';
-import Login from './components/Login';
-import { auth } from './firebase'
-import { useStateValue } from './StateProvider';
-import Payment from './components/Payment';
-
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Header from "./components/Header";
+import axios from "axios";
+import "./App.css";
+import Home from "./components/Home";
+import Product from "./components/Product";
+import Checkout from "./components/Checkout";
+import Login from "./components/Login";
+import { auth } from "./firebase";
+import { useStateValue } from "./StateProvider";
+import Payment from "./components/Payment";
 
 function App() {
-  const [{ }, dispatch] = useStateValue()
-  const [products, setProducts] = useState([])
+  const [{}, dispatch] = useStateValue();
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get('https://fakestoreapi.com/products')
-      .then(res => {
-        setProducts(res.data)
+    axios
+      .get("https://fakestoreapi.com/products")
+      .then((res) => {
+        setProducts(res.data);
       })
-      .catch(error => alert('error!'))
+      .catch((error) => alert("error!"));
 
-    auth.onAuthStateChanged(authUser => {
+    auth.onAuthStateChanged((authUser) => {
       if (authUser) {
         dispatch({
-          type: 'SET_USER',
-          user: authUser
-        })
+          type: "SET_USER",
+          user: authUser,
+        });
       } else {
         dispatch({
-          type: 'SET_USER',
-          user: null
-        })
+          type: "SET_USER",
+          user: null,
+        });
       }
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     <Router>
-      <div className="App">
+      <div className="app">
         <Switch>
           {/* login page */}
           <Route exact path="/login">

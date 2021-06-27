@@ -1,41 +1,63 @@
 .checkoutProduct {
-    display: flex;
-    margin: 20px 0;
-    background-color: #f3f3f3;
-    border: 1px solid #dddddd;
-    padding: 30px 10px;
-    border-radius: 5px;
+  display: flex;
+  margin: 20px 0;
+  background-color: #f3f3f3;
+  border: 1px solid #dddddd;
+  padding: 30px 10px;
+  border-radius: 5px;
 }
 
 .checkoutProduct__info {
-    padding-left: 20px;
-    margin-left: 20px;
+  padding-left: 20px;
+  margin-left: 20px;
 }
 
 .checkoutProduct__image {
-    object-fit: contain;
-    width: 180px;
-    height: 180px;
-    margin-left: 10px;
+  object-fit: contain;
+  width: 180px;
+  height: 180px;
+  margin-left: 10px;
 }
 
-.checkoutProduct__info>button {
-    background-color: #f0c14b;
-    border: 1px solid;
-    border-radius: 3px;
-    margin-top: 20px;
-    border-color: #a88734 #9c7e31 #846a29;
-    color: #111;
-    padding: 3px 5px;
-    cursor: pointer;
+.checkoutProduct__info > button {
+  background-color: rgb(239, 119, 0);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  margin-top: 20px;
+  color: #111;
+  padding: 7px 9px;
+  cursor: pointer;
 }
 
 .checkoutProduct__title {
-    font-size: 17px;
-    font-weight: 800;
-    margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: 800;
+  margin-bottom: 10px;
 }
 
 .checkoutProduct__price {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2.625),
+  only screen and (min--moz-device-pixel-ratio: 2.625),
+  only screen and (-o-min-device-pixel-ratio: 2.625/1),
+  only screen and (min-device-pixel-ratio: 2.625),
+  only screen and (min-resolution: 441dpi),
+  only screen and (min-resolution: 2.625dppx) {
+  .checkoutProduct {
+    width: 40vw;
+  }
+  .checkoutProduct__image {
+    margin: 0 auto;
+  }
+  .checkoutProduct__title {
+    font-size: 15px;
+  }
+  .checkoutProduct__info {
+    width: 90%;
+  }
+  .checkoutProduct__remove {
+    width: 115px;
+  }
 }

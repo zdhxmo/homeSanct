@@ -1,57 +1,65 @@
 .header {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: black;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .header_logo {
-    width: 40px;
-    object-fit: contain;
-    margin: 0 10px;
-    margin-top: 15px;
+  width: 40px;
+  object-fit: contain;
+  margin: 0 30px;
 }
 
 .header_nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .header__option {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    margin-right: 10px;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
 }
 
 .header__option__lineOne {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 .header__option__lineTwo {
-    font-size: 13px;
-    font-weight: 800;
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .header__optionCart {
-    width: 100%;
-    display: flex;
-    flex-direction: row !important;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
 }
 
 .header__cart {
-    color: white;
+  color: white;
 }
 
 .header__cartCount {
-    margin-left: 10px;
-    margin-right: 10px;
-    color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
 }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2.625),
+  only screen and (min--moz-device-pixel-ratio: 2.625),
+  only screen and (-o-min-device-pixel-ratio: 2.625/1),
+  only screen and (min-device-pixel-ratio: 2.625),
+  only screen and (min-resolution: 441dpi),
+  only screen and (min-resolution: 2.625dppx) {
+    .header {
+      justify-content: space-around;
+ }}

@@ -1,33 +1,53 @@
 .payment {
-    background-color: white;
+  background-color: white;
 }
 
-.payment__container>h1 {
-    text-align: center;
-    padding: 10px;
-    font-weight: 400;
-    background-color: rgb(234, 237, 237);
-    border-bottom: 1px solid lightgray;
+.payment__container > h1 {
+  text-align: center;
+  padding: 10px;
+  font-weight: 400;
+  background-color: rgb(234, 237, 237);
+  border-bottom: 1px solid lightgray;
 }
 
-.payment__container>h1 a {
-    text-decoration: none;
-    color: black;
+.payment__container > h1 a {
+  text-decoration: none;
+  color: black;
 }
 
 .payment__section {
-    display: flex;
-    padding: 20px;
-    margin: 0 20px;
-    border-bottom: 1px solid lightgray;
+  display: flex;
+  padding: 20px;
+  margin: 0 20px;
+  border-bottom: 1px solid lightgray;
+}
+.payment__items {
+  margin-right: 100px;
 }
 
 .payment__title {
-    flex: 0.3;
+  flex: 0.3;
 }
 
-.payment__address, 
-.payment__items, 
+.payment__address,
+.payment__items,
 .payment__details {
-    flex: 0.7;
+  flex: 0.7;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2.625),
+  only screen and (min--moz-device-pixel-ratio: 2.625),
+  only screen and (-o-min-device-pixel-ratio: 2.625/1),
+  only screen and (min-device-pixel-ratio: 2.625),
+  only screen and (min-resolution: 441dpi),
+  only screen and (min-resolution: 2.625dppx) {
+  .payment__container {
+    overflow-y: scroll;
+  }
+  .payment__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
