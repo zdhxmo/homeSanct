@@ -15,9 +15,10 @@
 
 .login__container {
   width: 300px;
-  height: fit-content;
+  height: 300px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   border-radius: 5px;
   border: 1px solid lightgray;
   padding: 20px 30px;
@@ -53,12 +54,11 @@
 .login__signInButton {
   background-color: rgb(247, 127, 0);
   border: 1px solid transparent;
-  border: 1px solid;
   border-radius: 3px;
   color: #111;
   padding: 7px 10px;
   cursor: pointer;
-  margin: 0 auto;
+  margin: 40px auto;
   width: 100%;
 }
 

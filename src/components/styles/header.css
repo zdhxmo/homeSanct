@@ -23,6 +23,7 @@
 .header__option {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-left: 10px;
   margin-right: 10px;
   color: white;
@@ -61,5 +62,6 @@
   only screen and (min-resolution: 441dpi),
   only screen and (min-resolution: 2.625dppx) {
     .header {
-      justify-content: space-around;
+      width: 100vw;
+      justify-content: space-between;
  }}

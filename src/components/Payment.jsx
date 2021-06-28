@@ -14,18 +14,6 @@ function Payment() {
         <h1>
           Checkout (<Link to="/checkout">{cart?.length} items</Link>)
         </h1>
-
-        {/* delivery address */}
-        <div className="payment__section">
-          <div className="payment__title">
-            <h3>Delivery Address</h3>
-          </div>
-          <div className="payment_address">
-            <p>{user?.email}</p>
-            <p>123 Louis Lane</p>
-            <p>Vancouver, BC</p>
-          </div>
-        </div>
         {/* review items */}
         <div className="payment__section">
           <div className="payment__title">
