@@ -21,6 +21,7 @@ const promise = loadStripe(
 function App() {
   const [{}, dispatch] = useStateValue();
   const [products, setProducts] = useState([]);
+  console.log(products)
 
   useEffect(() => {
     axios
