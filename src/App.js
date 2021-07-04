@@ -17,9 +17,8 @@ const promise = loadStripe(
   "pk_test_51J7OgKSJQBJwFnd6qTglJq1ghGY65nPLFoahTIxSFI1uGsrU9FYmQJwIPeqe1R68CPjNND9GSCTbzzivIaWjuisR00JsJgwlJd"
 );
 
-
 function App() {
-  const [{}, dispatch] = useStateValue();
+  const [{ cart }, dispatch] = useStateValue();
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -31,7 +30,7 @@ function App() {
       })
       .catch((error) => alert("error!"));
 
-      /* user state persistence */
+    /* user state persistence */
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
         dispatch({

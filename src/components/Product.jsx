@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useStateValue } from "../StateProvider";
 import "./styles/product.css";
 
@@ -18,6 +18,7 @@ function Product({ id, title, description, image, price }) {
       },
     });
   };
+
 
   return (
     <div className="product">
