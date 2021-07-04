@@ -12,6 +12,7 @@ function Checkout() {
         <div>
           <h3>Hello, {user?.displayName}</h3>
           <h2 className="checkout__title">Your Shopping Cart</h2>
+          {/* iterate over cart and send to CheckoutProduct component */}
             {cart.map((item) => (
               <CheckoutProduct
                 id={item.id}

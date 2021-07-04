@@ -9,9 +9,9 @@ function Subtotal() {
   const history = useHistory();
   const [{ cart }, dispatch] = useStateValue();
 
-  const createCheckoutSession = () => {};
   return (
     <div className="subtotal">
+      {/* display subtotal */}
       <CurrencyFormat
         renderText={(value) => (
           <>

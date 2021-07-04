@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://localhost:5001/homesanct-dm/us-central1/api",
+  baseURL: "...",
 });
 
 export default instance;

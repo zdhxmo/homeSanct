@@ -4,6 +4,8 @@ import './styles/checkoutProduct.css'
 
 function CheckoutProduct({ id, image, title, price}) {
     const [{ }, dispatch] = useStateValue();
+
+    // dispatch remove from cart
     const removeFromCart = () => {
         dispatch({
             type: 'REMOVE_FROM_CART',

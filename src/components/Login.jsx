@@ -8,9 +8,8 @@ import { useStateValue } from "../StateProvider";
 function Login() {
   const [{ user }, dispatch] = useStateValue();
   const history = useHistory();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
+  // dispatch user details
   const signIn = (e) => {
     e.preventDefault();
     auth

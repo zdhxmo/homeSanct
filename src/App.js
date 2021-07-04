@@ -21,9 +21,9 @@ const promise = loadStripe(
 function App() {
   const [{}, dispatch] = useStateValue();
   const [products, setProducts] = useState([]);
-  console.log(products)
 
   useEffect(() => {
+    /* fetch API */
     axios
       .get("https://fakestoreapi.com/products")
       .then((res) => {
@@ -31,6 +31,7 @@ function App() {
       })
       .catch((error) => alert("error!"));
 
+      /* user state persistence */
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
         dispatch({

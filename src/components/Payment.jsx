@@ -12,52 +12,17 @@ function Payment() {
   const [{ cart, user }, dispatch] = useStateValue();
   const history = useHistory();
 
-  const stripe = useStripe();
-  const elements = useElements();
-
   const [error, setError] = useState(null);
   const [disabled, setDisabled] = useState(true);
   const [succeeded, setSucceeded] = useState(false);
   const [processing, setProcessing] = useState("");
   const [clientSecret, setClientSecret] = useState(true);
 
-  useEffect(() => {
-    //generate Stripe secret to charge customer
-    const getClientSecret = async () => {
-      const response = await axios({
-        method: "post",
-        //stripe expects tottal in currency subunits
-        url: `/payment/create?total=${getCartTotal(cart) * 100}`,
-      });
-      setClientSecret(response.data.clientSecret);
-    };
-    getClientSecret();
-  }, [cart]);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setProcessing(true);
-
-    const payload = await stripe
-      .confirmCardPayment(clientSecret, {
-        payment_method: {
-          card: elements.getElement(CardElement),
-        },
-      })
-      .then(({ paymentIntent }) => {
-        //paymentIntent is payment confirmation
-        setSucceeded(true);
-        setError(null);
-        setProcessing(false);
-
-        history.replace("/");
-      });
   };
 
-  const handleChange = (e) => {
-    setDisabled(e.empty);
-    setError(e.error ? e.error.message : "");
-  };
+  const handleChange = (e) => {};
 
   return (
     <div className="payment">

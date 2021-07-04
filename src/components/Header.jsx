@@ -9,11 +9,13 @@ import Logo from '../img/logo.png';
 function Header() {
   const [{ cart, user }, dispatch] = useStateValue();
 
+  /* signout out using firebase auth */
   const handleAuthentication = () => {
     if (user) {
       auth.signOut();
     }
   };
+
   return (
     <div className="header">
       <Link to="/">
